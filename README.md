@@ -1,1 +1,2 @@
-# poke-game-blinker
+# poke-game
+Project 1

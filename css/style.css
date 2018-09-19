@@ -1,0 +1,164 @@
+
+/*Linking Pokemon Font*/
+@font-face {
+	font-family: "pokefont";
+	src: url("../fonts/Pokemon_GB.ttf") format("truetype");
+}
+
+#middle {
+	font-size: 20px;
+}
+
+.row {
+	float: none;
+	font-family: "pokefont";
+}
+
+.container-fluid {
+	width: 900px;
+	margin-top: 70px;
+}
+
+.headers {
+	font-size: 17px;
+	white-space: nowrap;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 12px;
+}
+
+.sides {
+	margin-top: 20px;
+}
+
+.options {
+	cursor: pointer;
+	border-radius: 5px;
+	text-indent: 30px;
+	margin: 10px 0;
+	font-size: 10px;
+}
+
+#myCanvas {
+	height: 300px;
+	width: 300px;
+}
+
+#name-input {
+	width: 275px;
+}
+
+#type-input {
+	width: 150px;
+}
+
+.typing-field {
+	margin: 5px 5px;
+	font-size: 10px;
+	text-align: center;
+}
+
+#myCanvas {
+	height: 300px;
+	width: 300px;
+}
+
+.forever-scores {
+	font-size: 45px;
+}
+
+.timed-scores {
+	font-size: 45px;
+}
+
+body {
+	background-color: #EBEEB2FF;
+}
+
+.col-2 {
+	border: 2px solid black;
+	border-radius: 30px;
+	height: 455px;
+}
+
+#game-section {
+	margin-top: -30px;
+}
+
+.selected {
+	background-color: #f2d468;
+}
+
+.pokeball {
+	height: 100px;
+	width: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -12px;
+}
+
+.wrap {
+	border: 2px solid #F88700FF;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+#start {
+	color: #F88700FF;
+	font-size: 10px;
+	margin-top: 15px;
+}
+
+.progress {
+	margin-bottom: 12px;
+}
+
+#progress-bar {
+	text-align: center;
+	align-content: center;
+	line-height: 20px;
+}
+
+#progress {
+	display: block;
+	width: 100%;
+	line-height: 30px;
+	font-size: 15px;
+}
+
+#restart {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 12px;
+	font-weight: 900;
+	border: 2px solid #FF755FFF;
+	color: #FF3E4BFF;
+	border-radius: 30px;
+	cursor: pointer;
+	padding-top: 5px;
+}
+
+#skip {
+	border: 2px solid #f1a167;
+	margin-left: -10px;
+	margin-right: -10px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 25px;
+	color: #f1a167;
+	cursor: help;
+	font-size: 9px;
+	padding-top: 3px;
+}
+
+#blinker1{
+	text-align: center;
+	margin-right: 31px;
+}
+
+
+
+
+
+
