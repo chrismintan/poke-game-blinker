@@ -92,6 +92,10 @@ var changeEasy = function() {
     mediumButton.classList.remove("selected");
     hardButton.classList.remove("selected");
     easyButton.classList.add("selected");
+    easyButton.style.backgroundColor = "#EBEEB2FF";
+    mediumButton.style.backgroundColor = "#EBEEB2FF";
+    hardButton.style.backgroundColor = "#EBEEB2FF";
+    easyButton.style.backgroundColor = "#f2d468";
 };
 
 var changeMedium = function() {
@@ -99,6 +103,10 @@ var changeMedium = function() {
     hardButton.classList.remove("selected");
     easyButton.classList.remove("selected");
     mediumButton.classList.add("selected");
+    easyButton.style.backgroundColor = "#EBEEB2FF";
+    mediumButton.style.backgroundColor = "#EBEEB2FF";
+    hardButton.style.backgroundColor = "#EBEEB2FF";
+    mediumButton.style.backgroundColor = "#f2d468";
     getPokemon();
 };
 
@@ -107,6 +115,10 @@ var changeHard = function() {
     easyButton.classList.remove("selected");
     mediumButton.classList.remove("selected");
     hardButton.classList.add("selected");
+    easyButton.style.backgroundColor = "#EBEEB2FF";
+    mediumButton.style.backgroundColor = "#EBEEB2FF";
+    hardButton.style.backgroundColor = "#EBEEB2FF";
+    hardButton.style.backgroundColor = "#f2d468";
     getPokemon();
 };
 
@@ -114,12 +126,16 @@ var foreverMode = function() {
     gameMode = 1;
     timedButton.classList.remove("selected");
     foreverButton.classList.add("selected");
+    timedButton.style.backgroundColor = "#EBEEB2FF";
+    foreverButton.style.backgroundColor = "#f2d468";
 };
 
 var timedMode = function() {
 	gameMode = 2;
     foreverButton.classList.remove("selected");
     timedButton.classList.add("selected");
+    foreverButton.style.backgroundColor = "#EBEEB2FF";
+    timedButton.style.backgroundColor = "#f2d468";
 }
 
 var clearText = function() {
@@ -687,6 +703,7 @@ var nameCheck = function() {
 var gameEnd = function() {
     clearCanvas();
     clearInputFields();
+    shuffledPokemons = [];
 };
 
 var seconds = 60;
