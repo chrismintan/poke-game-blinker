@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Who's That Pokemon!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- Creating the whole table -->
+<div class="container-fluid">
+
+	<!-- Having only one row so that the blocks of text do not stack on top of each other when window is resized -->
+	<div class="row">
+
+		<!-- Creating 3 columns via bootstrap -->
+        <div class="col-1"></div>
+		<div class="col-2">
+
+			<!-- Difficulty box with 3 settings (easy, medium, hard) -->
+			<h2 class="headers sides">Difficuty</h2>
+				<div class="options" id="easy">Speed</div>
+				<div class="options" id="medium">Ajax</div>
+				<div class="options" id="hard">Hard</div>
+
+            <!-- Creating game mode options (forever, timed) -->
+            <h2 class="headers sides">Game Mode</h2>
+                <div class="options" id="forever">Forever</div>
+                <div class="options" id="timed">Timed</div>
+
+            <!-- Creating a Start Game button -->
+            <div class="wrap" id="start-button">
+                <h2 class="headers sides" id="start">Start Game</h2>
+                <img class="pokeball" src="sprites/poke-ball.png">
+            </div>
+            <div id="restart">Restart</div>
+
+            <!-- Creating the Hint section of the game -->
+            <h2 class="headers sides" id="skip">I don't know,<br>Skip!</h2>
+
+		</div>
+
+		<!-- Middle section where the actual game happens -->
+		<div class="col-6" id="game-section" align="center">
+			<h1 class="game-title" id="middle">Who's that Pokemon?</h1>
+
+				<!-- Creating the picture frame where the pokemons will be displayed -->
+				<canvas id="myCanvas"></canvas>
+
+                <!-- Creating progress bar -->
+                <h3 id="progress">Select Difficulty and Mode and Press Start!</h3>
+                <div class="container">
+                    <div class="progress">
+                        <div class="progress-bar" id="progressBar" style="width: 0%">
+                        </div>
+                    </div>
+                </div>
+
+
+				<!-- Input field where answers are typed in -->
+				<form class="answer-area">
+                            <a class="middle container-fluid col-11" style="visibility: visible;">
+                            <a id="blinker1">
+                            </a>
+                            </a>
+					<!-- <input type="text" class="typing-field" id="name-input" placeholder="Pokemon Name..." onkeyup="nameCheck()"><br>
+					<input type="text" class="typing-field" id="type-input" placeholder="Pokemon Type..." onkeyup="nameCheck()"> -->
+				</form>
+
+		</div>
+
+		<!-- Score section to keep score -->
+		<div class="col-2" align="center">
+
+			<!-- Forever mode score -->
+			<h2 class="headers sides forever">Forever<br>Mode</h2>
+				<h3 class="headers forever" id="forever-header">Current<br>score:</h3>
+				<h1 class="forever-scores forever" id="forever-current-score"></h1>
+
+				<h3 class= "headers forever" id="forever-header">Best:</h3>
+				<h1 class= "forever-scores forever" id="forever-best-score"></h1>
+
+			<!-- Timed mode score -->
+			<h2 class="headers sides timed">Timed Mode</h2>
+				<h3 class="headers timed" id="timed-header">Current<br>score:</h3>
+				<h1 class="timed-scores timed" id="timed-current-score"></h1>
+
+				<h3 class= "headers timed" id="timed-header">Best:</h3>
+				<h1 class= "timed-scores timed" id="timed-best-score"></h1>
+		</div>
+        <div class="col-1"></div>
+    </div>
+
+</div>
+<script src="js/functions.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

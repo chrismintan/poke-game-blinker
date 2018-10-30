@@ -1,100 +1,88 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Who's That Pokemon!</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
+  <head>
+    <title>Geocoding Service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
 
-<body>
+    <div class="locations">
+        <div class="form-group">
+            <label>Person 1:</label>
+            <input type="text" id="person" class="form-control address-input" placeholder="Enter Postal Code" autocomplete="off"/>
+            <input type="text" id="lat" name="lat"/>
+            <input type="text" id="long" name="long"/>
+            <button class="btm btm-primary" id='place'>Place</button>
+        </div>
 
-<!-- Creating the whole table -->
-<div class="container-fluid">
+<!--         <div class="form-group">
+            <label>Person 2:</label>
+            <input type="text" id="person2" class="form-control address-input" placeholder="Enter Postal Code" autocomplete="off"/>
+            <input type="text" id="lat2" name="lat2"/>
+            <input type="text" id="long2" name="long2"/>
+            <button class="btm btm-primary">Place</button>
+        </div>
 
-	<!-- Having only one row so that the blocks of text do not stack on top of each other when window is resized -->
-	<div class="row">
+        <div class="form-group">
+            <label>Person 3:</label>
+            <input type="text" id="person3" class="form-control address-input" placeholder="Enter Postal Code" autocomplete="off"/>
+            <input type="text" id="lat3" name="lat3"/>
+            <input type="text" id="long3" name="long3"/>
+            <button class="btm btm-primary">Place</button>
+        </div>
 
-		<!-- Creating 3 columns via bootstrap -->
-        <div class="col-1"></div>
-		<div class="col-2">
+        <div class="form-group">
+            <label>Person 4:</label>
+            <input type="text" id="person4" class="form-control address-input" placeholder="Enter Postal Code" autocomplete="off"/>
+            <input type="text" id="lat4" name="lat4"/>
+            <input type="text" id="long4" name="long4"/>
+            <button class="btm btm-primary">Place</button>
+        </div>
+ -->
+        <div class="form-group">
+            <label>Calculate:</label>
+            <input type="text" id="latMid" class="form-control" placeholder="Avg Lat"/>
+            <input type="text" id="longMid" class="form-control" placeholder="Avg Long"/>
+            <button id="calculate">Calculate</button>
+        </div>
 
-			<!-- Difficulty box with 3 settings (easy, medium, hard) -->
-			<h2 class="headers sides">Difficuty</h2>
-				<div class="options" id="easy">Speed</div>
-				<div class="options" id="medium">Ajax</div>
-				<div class="options" id="hard">Hard</div>
-
-            <!-- Creating game mode options (forever, timed) -->
-            <h2 class="headers sides">Game Mode</h2>
-                <div class="options" id="forever">Forever</div>
-                <div class="options" id="timed">Timed</div>
-
-            <!-- Creating a Start Game button -->
-            <div class="wrap" id="start-button">
-                <h2 class="headers sides" id="start">Start Game</h2>
-                <img class="pokeball" src="sprites/poke-ball.png">
-            </div>
-            <div id="restart">Restart</div>
-
-            <!-- Creating the Hint section of the game -->
-            <h2 class="headers sides" id="skip">I don't know,<br>Skip!</h2>
-
-		</div>
-
-		<!-- Middle section where the actual game happens -->
-		<div class="col-6" id="game-section" align="center">
-			<h1 class="game-title" id="middle">Who's that Pokemon?</h1>
-
-				<!-- Creating the picture frame where the pokemons will be displayed -->
-				<canvas id="myCanvas"></canvas>
-
-                <!-- Creating progress bar -->
-                <h3 id="progress">Select Difficulty and Mode and Press Start!</h3>
-                <div class="container">
-                    <div class="progress">
-                        <div class="progress-bar" id="progressBar" style="width: 0%">
-                        </div>
-                    </div>
-                </div>
-
-
-				<!-- Input field where answers are typed in -->
-				<form class="answer-area">
-                            <a class="middle container-fluid col-11" style="visibility: visible;">
-                            <a id="blinker1">
-                            </a>
-                            </a>
-					<!-- <input type="text" class="typing-field" id="name-input" placeholder="Pokemon Name..." onkeyup="nameCheck()"><br>
-					<input type="text" class="typing-field" id="type-input" placeholder="Pokemon Type..." onkeyup="nameCheck()"> -->
-				</form>
-
-		</div>
-
-		<!-- Score section to keep score -->
-		<div class="col-2" align="center">
-
-			<!-- Forever mode score -->
-			<h2 class="headers sides forever">Forever<br>Mode</h2>
-				<h3 class="headers forever" id="forever-header">Current<br>score:</h3>
-				<h1 class="forever-scores forever" id="forever-current-score"></h1>
-
-				<h3 class= "headers forever" id="forever-header">Best:</h3>
-				<h1 class= "forever-scores forever" id="forever-best-score"></h1>
-
-			<!-- Timed mode score -->
-			<h2 class="headers sides timed">Timed Mode</h2>
-				<h3 class="headers timed" id="timed-header">Current<br>score:</h3>
-				<h1 class="timed-scores timed" id="timed-current-score"></h1>
-
-				<h3 class= "headers timed" id="timed-header">Best:</h3>
-				<h1 class= "timed-scores timed" id="timed-best-score"></h1>
-		</div>
-        <div class="col-1"></div>
     </div>
 
-</div>
-<script src="js/functions.js"></script>
-<script src="js/script.js"></script>
-</body>
+
+        <div id="map"></div>
+
+    <button id="marks">Set Markers</button>
+    <button id="mid">Set MidPoint</button>
+
+    <div>
+        Lat:<span id="dragLat"></span>
+        Long:<span id="dragLong"></span>
+    </div>
+
+    <div>
+        <input type="text" id="places" placeholder="Coffe, restaurants, etc"/>
+        <button id="list">Get Places</button>
+    </div>
+
+    <div class="container">
+        <div id="list">
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM3MixfBEjbgbPdvlSEu8kubULJuXv9bg&libraries=places&callback=initMap"
+        async defer></script>
+  </body>
 </html>
+
+
+
+
+
+
+

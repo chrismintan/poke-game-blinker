@@ -442,6 +442,8 @@ var getPokemon = function() {
     };
 };
 
+
+
 /*
 var getInAdvance = function() {
     if ( nameArray.length < 4 )
