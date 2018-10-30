@@ -134,7 +134,7 @@ function findPlaces() {
 
     let location = $("#dragLat").html() + "," + $("#dragLong").html();
 
-    let ajaxCall = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=1500&keyword=${input}&key=${API_KEY}`
+    let ajaxCall = "https://chrismintan.github.io/poke-game-blinker/" + `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=1500&keyword=${input}&key=${API_KEY}`
 
     let responseHandler = function() {
         responseObj = JSON.parse(this.responseText);
